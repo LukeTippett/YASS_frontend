@@ -1,28 +1,33 @@
-.everything{
-  margin: auto;
-  width: 60%;
-  border: 6px solid #ff604e;
-  padding: 10px;
-  margin-top:25%;
-}
-.finputs{
-  border-style: outset;
-  display: inline-block;
-  position: absolute;
-}
-input{
-  float: left;
-}
-h1{
-  text-align: center;
-  --textboxshadow: rgb(107, 48, 48);
-  background-color:#4eff92;
-  color:#ff604e;
-  text-shadow: 2px 0 0 var(--textboxshadow), -2px 0 0 var(--textboxshadow), 0 2px 0 var(--textboxshadow), 0 -2px 0 var(--textboxshadow), 1px 1px var(--textboxshadow), -1px -1px 0 var(--textboxshadow), 1px -1px 0 var(--textboxshadow), -1px 1px 0 var(--textboxshadow);
+body{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 100px auto auto;
+  grid-template-areas: 
+  'header header header'
+  'sideL main sideR'
+  'sideL main-bottom sideR';
+  justify-items: center;
 }
 form{
-  display: block;
-  margin: auto;
-  width: 70%;
-  padding: 10px;
+  grid-area: main;
+  background-color: #4eff92;
+  place-items: center;
+  padding:10px;
+}
+h1{
+  grid-area: main-bottom;
+  background-color: #ff604e;
+  place-items: center;
+  display: grid;
+  padding:10px;
+}
+.search-box{
+  width: 350px;
+  height: 20px;
+  border: solid 1px black;
+}
+.go{
+  height: 20px;
+  border: solid 1px black;
 }
